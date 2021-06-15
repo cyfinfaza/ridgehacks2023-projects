@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 import * as pageStyle from './index.module.css'
-import * as data from '../../data/projects.json'
+const data = require('../../static/projects.json')
 
 const ProjectCard = ({data, index=0})=>{
   const {name, creators, link} = data;
@@ -14,13 +14,15 @@ const ProjectCard = ({data, index=0})=>{
   </a>
 }
 
-const IndexPage = () => (
+const IndexPage = () => {
+  console.log(data)
+  return(
   <Layout>
     <Seo title="Home" />
     <div className={pageStyle.projectsContainer}>
-      {data.map((element, i)=><ProjectCard key={element.name+element.creators} data={element} index={i} />)}
+      {data.map((element, i)=><ProjectCard key={i} data={element} index={i} />)}
     </div>
   </Layout>
-)
+)}
 
 export default IndexPage
