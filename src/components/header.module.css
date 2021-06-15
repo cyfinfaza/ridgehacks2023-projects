@@ -1,0 +1,20 @@
+.header{
+	/* position: sticky; */
+	top: 0;
+	padding: 24px;
+	background-color: var(--background);
+}
+.header>*{
+	margin: 0;
+}
+@supports (backdrop-filter: blur(24px)){
+	.header{
+		backdrop-filter: var(--backdrop-filter);
+		background-color: var(--background-translucent);
+	}
+}
+@media screen and (max-height: 850px) {
+	.header{
+		position: static;
+	}
+}

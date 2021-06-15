@@ -1,0 +1,52 @@
+@keyframes zoomin {
+	0%{
+		opacity: 0;
+		transform: scale(0.8);
+	}
+}
+
+.projectsContainer{
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+	gap: 16px;
+}
+
+.projectCard{
+	background-color: var(--foreground);
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	text-decoration: none;
+	padding: 16px;
+	border-radius: 16px;
+	box-sizing: border-box;
+	transition: 240ms;
+	animation: zoomin 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275) backwards;
+}
+
+.projectCard>*{
+	margin: 0;
+}
+
+.projectCard>*+*{
+	margin-top: 16px;
+}
+
+.projectCard:hover, .projectCard:focus{
+	background-color: white;
+	color: black;
+}
+
+.projectCard:active{
+	filter: contrast(0.5);
+	transform: translateY(2px);
+}
+
+.projectCard>p>span{
+	font-weight: 700;
+}
+
+.projectCard>h2{
+	font-size: 32px;
+}

@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+body{
+	--background: black;
+	--foreground: #222;
+	--text: white;
+	--background-translucent: #0008;
+	--backdrop-filter: blur(24px);
+}
+
+body{
+	margin: 0;
+	font-family: 'Space Mono', sans-serif;
+	background-color: var(--background);
+	color: var(--text);
+}
+a{
+	color: var(--text);
+}
