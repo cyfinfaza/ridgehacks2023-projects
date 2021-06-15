@@ -36,6 +36,7 @@
 .projectCard:hover, .projectCard:focus{
 	background-color: white;
 	color: black;
+	outline: none;
 }
 
 .projectCard:active{
