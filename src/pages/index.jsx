@@ -8,7 +8,7 @@ const data = require('../../static/projects.json')
 
 const ProjectCard = ({data, index=0})=>{
   const {name, creators, link} = data;
-  return <a href={link} className={pageStyle.projectCard} style={{animationDelay:Math.random()*0.3+'s'}} tabIndex={0}>
+  return <a href={link} className={pageStyle.projectCard} style={{animationDelay:Math.random()*0.3+'s'}} target="_blank" rel="noopener noreferrer" tabIndex={0}>
     <h2>{name}</h2>
     <p>Created by <strong>{creators}</strong></p>
   </a>
