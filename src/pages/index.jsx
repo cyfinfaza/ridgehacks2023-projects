@@ -15,7 +15,7 @@ const ProjectCard = ({data, index=0})=>{
 }
 
 const IndexPage = () => {
-  console.log(data)
+  // console.log(data)s
   return(
   <Layout>
     <Seo title="Home" />
